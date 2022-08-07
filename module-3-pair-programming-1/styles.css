@@ -1,0 +1,218 @@
+body {
+    display: grid;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+    grid-template-areas: 
+    "header navigation"
+    "main main"
+    "race store"
+    "footer footer"
+    ;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 20px 0 0 0;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    
+}
+
+header img {
+    display: inline-block;
+    height: 100px;
+    width: auto;
+    
+}
+header h1 {
+    display: inline-block;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    
+}
+
+header {
+    display: flex;
+    grid-area: header;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+main {
+    grid-area: main;
+    display: flex;
+    justify-content: flex-center;
+}
+
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 350px;
+    width: 35%;
+}
+
+#maindiv {
+    padding-top: 50px;
+}
+
+main li {
+    padding: 10px;
+}
+
+main li:before {
+    content: '🍡';
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+#race {
+    display: grid;
+    grid-area: race;
+    grid-template-areas:
+    "race-image race-header"
+    "race-image race-info";
+    justify-content: center;
+    
+}
+
+#race-image {
+    grid-area: race-image;
+}
+
+#race-header {
+    grid-area: race-header;
+    text-align: center;
+}
+
+#race-info {
+    grid-area: race-info;
+    width: 70%;
+}
+
+#store {
+    display: flex;
+    flex-direction: column;
+    grid-area: store;
+}
+
+#store > h2 {
+text-align: center;
+}
+
+#store > p {
+    height: 30%;
+}
+
+
+footer {
+    grid-area: footer;
+}
+
+main, section, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    align-self: center;
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+
+  a:hover {
+    animation: bounce 1s;
+  }
+
+  li:hover {
+    animation: bounce 1s;
+  }
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "main"
+        "race"
+        "store"
+        "footer";
+    }
+
+    main {
+        display: grid;
+        grid-template-areas: 
+        "main-image"
+        "main-info";
+    }
+
+    main img {
+        grid-area: main-image;
+        width: 100%;
+    }
+
+    main li {
+        grid-area: main-info;
+    }
+
+    nav ul li {
+        list-style: none;
+        width: 30%;
+        background-color: #00afef;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 50px;
+        float: left;
+        
+    }
+
+}
+
+

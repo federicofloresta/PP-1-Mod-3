@@ -1,0 +1,162 @@
+body {
+    display: grid;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+    grid-template-areas: 
+    "header navigation"
+    "main main"
+    "race store"
+    "footer footer"
+    ;
+}
+
+nav ul {
+    display: flex;
+    margin: 0;
+    padding: 20px 0 0 0;
+    justify-content: space-around;
+}
+
+nav ul li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    
+}
+
+header img {
+    display: inline-block;
+    height: 100px;
+    width: auto;
+    
+}
+header h1 {
+    display: inline-block;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+header {
+    display: flex;
+    grid-area: header;
+}
+
+nav {
+    grid-area: navigation;
+}
+
+
+main {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px; 
+    grid-area: main;
+    justify-content: flex-center;
+}
+
+nav> ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+#color, #input, #name {
+    width: 15%;
+}
+
+#referral {
+    padding-bottom: 10px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+main, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#comments {
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.submit { /* used for submit link in submit section */
+    display: block;
+    width: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fcfcfc;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none; 
+}
+
+@keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+
+  a:hover {
+    animation: bounce 1s;
+  }
+
+  li:hover {
+    animation: bounce 1s;
+  }
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "navigation"
+        "contact"
+        "footer";
+    }
+
+    main {
+        grid-area: contact;
+    }
+
+    #color, #input, #name {
+        width: 100%;
+    }
+
+    .submit { /* used for submit link in submit section */
+        display: block;
+        width: 30%;
+        padding: 10px;
+        border-radius: 5px;
+        color: #fcfcfc;
+        background-color: #00afef;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none; 
+    }
+
+}
